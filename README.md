@@ -1,8 +1,8 @@
 # Project
 
-Contentful (CMS)
-Tailwind (CSS Library)
-Vercel (CI/CD)
+- Contentful (Headless CMS)
+- Tailwind (CSS Library)
+- Vercel (CI/CD)
 
 # React + TypeScript + Vite
 
