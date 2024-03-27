@@ -8,10 +8,6 @@ interface Links {
   }
 }
 
-// interface Links {
-//   [index: string]: Link
-// }
-
 export default (links: Links): ReactNode => {
   return (
     <ul>

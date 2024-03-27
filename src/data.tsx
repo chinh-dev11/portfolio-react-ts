@@ -29,7 +29,7 @@ export const hero = {
   },
   image: {
     src: niaImage,
-    title: 'not available image'
+    title: 'no image available'
   }
 }
 
@@ -59,7 +59,7 @@ export const about = {
   text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ad quia ipsam numquam maiores quos sint provident ipsum neque nihil autem, tenetur reprehenderit corporis. Sequi suscipit aspernatur necessitatibus id blanditiis!',
   image: {
     src: niaImage,
-    title: 'not available image'
+    title: 'no image available'
   }
 }
 
@@ -83,7 +83,7 @@ export const projects = {
       },
       image: {
         src: niaImage,
-        title: 'not available image'
+        title: 'no image available'
       }
     },
     {
@@ -103,7 +103,7 @@ export const projects = {
       },
       image: {
         src: niaImage,
-        title: 'not available image'
+        title: 'no image available'
       }
     },
     {
@@ -123,7 +123,7 @@ export const projects = {
       },
       image: {
         src: niaImage,
-        title: 'not available image'
+        title: 'no image available'
       }
     },
   ]
