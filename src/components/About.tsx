@@ -1,16 +1,20 @@
-import '../styles/About.css'
 import useFetchData from '../services/fetchData'
+import { BlockProps, ImageProps } from '../types'
+import '../styles/About.css'
 
 const About = () => {
-  const { loading, data } = useFetchData('about')
+  const { loading, data: { block, image } } = useFetchData('about')
   
   if (loading) return <div>Loading...</div>
 
+  const { title, text }: BlockProps = block.fields
+  const imageData: ImageProps = image.fields
+
   return (
     <section className='about' id="section3">
-      <img src={data.image.fields.file.url} alt={data.image.fields.title} />
-      <h2>{data.title}</h2>
-      <p>{data.text}</p>
+      <img src={imageData.file.url} alt={imageData.title} />
+      <h2>{title}</h2>
+      <p>{text}</p>
     </section>
   )
 }
