@@ -1,18 +1,27 @@
+import useFetchData from '../services/fetchData'
+import { createLinksList } from '../helpers/createLinksList'
+import { LinkProps, ImageProps, BlockProps } from '../types'
 import '../styles/Hero.css'
-import { hero } from '../data'
-import parseLinks from '../helpers/links'
 
 const Hero = () => {
+  const { loading, data: { block, image, links } } = useFetchData('hero')
+
+  if (loading) return <div>Loading...</div>
+
+  const { title, subtitle, text }: BlockProps = block.fields
+  const imageData: ImageProps = image.fields
+  const linksData: LinkProps[] = Object.values(links.fields).map((link: any): LinkProps => link.fields)
+
   return (
     <section className='hero' id="section1">
       <div>
-        <h1>{hero.title}</h1>
-        <h2>{hero.subtitle}</h2>
-        <p>{hero.text}</p>
-        <div className="links">{parseLinks(hero.links)}</div>
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
+        <p>{text}</p>
+        {createLinksList(linksData)}
       </div>
       <div>
-        <img src={hero.image.src} alt={hero.image.title} />
+        <img src={imageData.file.url} alt={imageData.title} />
       </div>
     </section>
   )

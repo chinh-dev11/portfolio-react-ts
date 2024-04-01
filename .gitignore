@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .env
+*copy.*
+data.tsx
 
 # Editor directories and files
 .vscode/*

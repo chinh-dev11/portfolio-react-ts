@@ -3,6 +3,7 @@
 - Contentful (Headless CMS)
 - Tailwind (CSS Library)
 - Vercel (CI/CD)
+- [Github](https://github.com/chinh-dev11/portfolio-react-ts)
 
 # React + TypeScript + Vite
 

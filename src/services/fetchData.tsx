@@ -16,9 +16,10 @@ export default (contentType: string) => {
     const fetchData = async () => {
       try {
         const { items } = await client.getEntries({
-          'content_type': contentType
+          'content_type': contentType,
+          include: 4 // 1 (default)
         });
-        console.log('items',items[0].fields)
+        
         setData(items[0].fields);
       } catch (error) {
         console.error(error);
@@ -26,6 +27,7 @@ export default (contentType: string) => {
         setLoading(false);
       }
     };
+    
     fetchData();
   }, []);
 
