@@ -5,6 +5,34 @@
 - Vercel (CI/CD)
 - [Github](https://github.com/chinh-dev11/portfolio-react-ts)
 
+### Tailwind CSS
+[Installation using PostCSS](https://tailwindcss.com/docs/installation/using-postcss)
+```
+$ yarn add -D tailwindcss postcss autoprefixer
+$ npx tailwindcss init # create tailwind.config.js
+
+# tailwindcss.config.js
+...
+export default {
+  content: ["./index.html","./src/**/*.{vue,js,jsx,ts,tsx}"],
+  ...
+}
+
+# postcss.config.js
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+# style.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
