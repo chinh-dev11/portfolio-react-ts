@@ -11,9 +11,9 @@ const About = () => {
   const imageData: ImageProps = image.fields
 
   return (
-    <section className='about' id="section3">
-      <img src={imageData.file.url} alt={imageData.title} />
-      <h2>{title}</h2>
+    <section className="px-10 py-20 bg-white" id="section3">
+      <img src={imageData.file.url} alt={imageData.title} className="pb-20" />
+      <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{title}</h2>
       <p>{text}</p>
     </section>
   )

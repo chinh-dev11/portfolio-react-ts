@@ -18,8 +18,8 @@ const Skill = () => {
   const skillsData: SkillProps[] = Object.values(list.fields).map((skill: any) => skill.fields)
 
   return (
-    <section className="px-10 py-20 bg-white" id="section2">
-      <h2 className="text-3xl font-bold capitalize border-b border-gray-200 pb-5 mb-16">{blockData.title}</h2>
+    <section className="px-10 py-20" id="section2">
+      <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{blockData.title}</h2>
       <ul className="flex flex-row flex-wrap gap-5">
         {skillsData.map(({ title, icon }, index) => {
           return (
