@@ -20,13 +20,15 @@ const createProjectsList = (projects: any[]): ReactNode => {
   })
 
   return (
-    <ul>
+    <ul className="flex flex-row flex-wrap gap-8">
       {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
-        <li key={index}>
-          <img src={imageUrl} alt={imageTitle} />
-          <h2>{title}</h2>
-          <p>{text}</p>
-          {createLinksList(links)}
+        <li key={index} className="bg-white rounded-lg">
+          <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
+          <div className="p-10">
+            <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
+            <p className="mb-5">{text}</p>
+            {createLinksList(links)}
+          </div>
         </li>
       ))}
     </ul>
@@ -42,8 +44,8 @@ const Projects = () => {
   const projectsData = Object.values(list.fields)
 
   return (
-    <section className='projects' id="section4">
-      <h2>{title}</h2>
+    <section className="px-10 py-20" id="section4">
+      <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{title}</h2>
       {createProjectsList(projectsData)}
     </section>
   )
