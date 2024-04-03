@@ -24,9 +24,9 @@ export default () => {
           return (
             <li key={index}>
               <span title={title}>
-                {icon === 'html' && <FaHtml5 className="w-20 h-20 text-[#de4b25]" />}
-                {icon === 'js' && <FaJs className="w-20 h-20 text-[#e9d21b]" />}
-                {icon === 'react' && <FaReact className="w-20 h-20 text-[#47d2f8]" />}
+                {icon === 'html' && <FaHtml5 className="w-20 h-20 text-html" />}
+                {icon === 'js' && <FaJs className="w-20 h-20 text-js" />}
+                {icon === 'react' && <FaReact className="w-20 h-20 text-react" />}
                 {icon === '' && title}
               </span>
             </li>
