@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import useFetchData from '../services/fetchData'
 import { createLinksList } from "../helpers/createLinksList"
 import { BlockProps, ImageProps, LinkProps } from '../types'
-import { capitalize } from '../helpers'
+import { createPillList } from "../helpers/createPillList"
 
 const createProjectsList = (projects: any[]): ReactNode => {
   const projectsData = projects.map(project => {
@@ -26,9 +26,7 @@ const createProjectsList = (projects: any[]): ReactNode => {
             <div className="bg-gray-50 pb-1 flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="rounded-t-lg" /></div>
             <div className="p-10">
               <h2 className="text-xl font-bold mb-5 capitalize">{imageTitle}</h2>
-              <ul className="flex flex-row flex-wrap gap-1 text-xs">
-                {techList.map((tech, index) => <li key={index} className="bg-gray-50 p-2 rounded">{capitalize(tech)}</li>)}
-              </ul>
+              {createPillList(techList)}
             </div>
           </div>
           <div className="px-10 pb-10">{createLinksList(links)}</div>

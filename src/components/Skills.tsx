@@ -5,6 +5,7 @@ import { IoIosGitBranch } from "react-icons/io"
 import useFetchData from '../services/fetchData'
 import { BlockProps } from '../types'
 import { capitalize } from '../helpers'
+import { createPillList } from '../helpers/createPillList'
 
 interface SkillProps {
   title: string,
@@ -45,12 +46,12 @@ const createIconNode = (skill: SkillProps): ReactNode | undefined => {
 
 const createSkillsNodes = (skillsData: SkillProps[]): ReactNode => {
   const skillsIcons: ReactNode[] = []
-  const skillsTitles: ReactNode[] = []
+  const skillsTitles: string[] = []
 
   skillsData.forEach(skill => {
     const skillIcon = createIconNode(skill)
 
-    if (!skillIcon) skillsTitles.push(<span className="capitalize">{skill.title}</span>)
+    if (!skillIcon) skillsTitles.push(skill.title)
     else skillsIcons.push(skillIcon)
   })
 
@@ -63,13 +64,7 @@ const createSkillsNodes = (skillsData: SkillProps[]): ReactNode => {
           ))}
         </ul>
       )}
-      {skillsTitles.length && (
-        <ul className="flex flex-row flex-wrap gap-4">
-          {skillsTitles.map((skill, index) => (
-            <li key={index} className="bg-gray-200 p-2 rounded">{skill}</li>
-          ))}
-        </ul>
-      )}
+      {skillsTitles.length && createPillList(skillsTitles)}
     </div>
   )
 }
