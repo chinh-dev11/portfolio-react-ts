@@ -1,7 +1,6 @@
 import useFetchData from '../services/fetchData'
-import '../styles/Navbar.css'
 
-const Navbar = () => {
+export default () => {
   const { loading, data } = useFetchData('navbar')
 
   if (loading) return <div>Loading...</div>
@@ -19,7 +18,7 @@ const Navbar = () => {
           <ul className="flex flex-row gap-4 capitalize text-lg">
             {sections.map((section: string, index: number) => (
               <li key={index} className="">
-                <a href={`#section${index + 1}`} className="hover:border-b hover:border-black pb-1">{section}</a>
+                <a href={`#section${index + 1}`} className="border-b border-b-sky-200 hover:border-black pb-1 duration-300">{section}</a>
               </li>
             ))}
           </ul>
@@ -28,5 +27,3 @@ const Navbar = () => {
     </header>
   )
 }
-
-export default Navbar

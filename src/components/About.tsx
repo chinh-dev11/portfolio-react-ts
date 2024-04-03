@@ -1,8 +1,7 @@
 import useFetchData from '../services/fetchData'
 import { BlockProps, ImageProps } from '../types'
-import '../styles/About.css'
 
-const About = () => {
+export default () => {
   const { loading, data: { block, image } } = useFetchData('about')
 
   if (loading) return <div>Loading...</div>
@@ -22,5 +21,3 @@ const About = () => {
     </section>
   )
 }
-
-export default About

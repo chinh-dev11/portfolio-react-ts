@@ -1,9 +1,8 @@
 import useFetchData from '../services/fetchData'
 import { createLinksList } from '../helpers/createLinksList'
 import { LinkProps, ImageProps, BlockProps } from '../types'
-import '../styles/Hero.css'
 
-const Hero = () => {
+export default () => {
   const { loading, data: { block, image, links } } = useFetchData('hero')
 
   if (loading) return <div>Loading...</div>
@@ -28,5 +27,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero

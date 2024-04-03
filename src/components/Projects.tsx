@@ -2,7 +2,6 @@ import { ReactNode } from "react"
 import useFetchData from '../services/fetchData'
 import { createLinksList } from "../helpers/createLinksList"
 import { BlockProps, ImageProps, LinkProps } from '../types'
-import '../styles/Projects.css'
 
 const createProjectsList = (projects: any[]): ReactNode => {
   const projectsData = projects.map(project => {
@@ -20,34 +19,24 @@ const createProjectsList = (projects: any[]): ReactNode => {
   })
 
   return (
-    <ul className="grid grid-cols-1 gap-8 md:grid=cols-2 lg:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
-        <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300">
-          <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
-          <div className="p-10">
-            <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
-            <p className="mb-5">{text}</p>
-            {createLinksList(links)}
+        <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 flex flex-col justify-between">
+          <div>
+            <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
+            <div className="p-10">
+              <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
+              <p className="mb-5">{text}</p>
+            </div>
           </div>
+          <div className="px-10 pb-10">{createLinksList(links)}</div>
         </li>
       ))}
     </ul>
-    // <ul className="flex flex-row flex-wrap gap-8">
-    //   {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
-    //     <li key={index} className="bg-white rounded-lg">
-    //       <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
-    //       <div className="p-10">
-    //         <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
-    //         <p className="mb-5">{text}</p>
-    //         {createLinksList(links)}
-    //       </div>
-    //     </li>
-    //   ))}
-    // </ul>
   )
 }
 
-const Projects = () => {
+export default () => {
   const { loading, data: { block, list } } = useFetchData('projects')
 
   if (loading) return <div>Loading...</div>
@@ -62,5 +51,3 @@ const Projects = () => {
     </section>
   )
 }
-
-export default Projects

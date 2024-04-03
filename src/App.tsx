@@ -9,13 +9,12 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="">
+      <div>
         <Hero />
         <Skills />
         <About />
         <Projects />
       </div>
-
     </div>
   )
 }
