@@ -8,8 +8,10 @@ import './styles/App.css'
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <div className="bg-sky-200 p-5">
+        <Navbar />
+        <Hero />
+      </div>
       <Skills />
       <About />
       <Projects />

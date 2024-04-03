@@ -13,14 +13,14 @@ const Hero = () => {
   const linksData: LinkProps[] = Object.values(links.fields).map((link: any): LinkProps => link.fields)
 
   return (
-    <section className='hero' id="section1">
+    <section className="my-20 flex items-center gap-20" id="section1">
       <div>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-        <p>{text}</p>
+        <h1 className="text-6xl font-bold mb-2">{title}</h1>
+        <h2 className="text-3xl capitalize mb-2">{subtitle}</h2>
+        <p className="text-lg capitalize mb-4">{text}</p>
         {createLinksList(linksData)}
       </div>
-      <div>
+      <div className="hidden md:block">
         <img src={imageData.file.url} alt={imageData.title} />
       </div>
     </section>
