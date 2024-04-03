@@ -18,20 +18,18 @@ const Skill = () => {
   const skillsData: SkillProps[] = Object.values(list.fields).map((skill: any) => skill.fields)
 
   return (
-    <section className='skills' id="section2">
-      <h2>{blockData.title}</h2>
-      <ul>
-        {skillsData.map(({ title, text, icon }, index) => {
+    <section className="px-10 py-20 bg-white" id="section2">
+      <h2 className="text-3xl font-bold capitalize border-b border-gray-200 pb-5 mb-16">{blockData.title}</h2>
+      <ul className="flex flex-row flex-wrap gap-5">
+        {skillsData.map(({ title, icon }, index) => {
           return (
             <li key={index}>
-              <span>
-                {icon === 'html' && <FaHtml5 />}
-                {icon === 'js' && <FaJs />}
-                {icon === 'react' && <FaReact />}
+              <span title={title}>
+                {icon === 'html' && <FaHtml5 className="w-20 h-20 text-[#de4b25]" />}
+                {icon === 'js' && <FaJs className="w-20 h-20 text-[#e9d21b]" />}
+                {icon === 'react' && <FaReact className="w-20 h-20 text-[#47d2f8]" />}
                 {icon === '' && title}
               </span>
-              <h3>{title}</h3>
-              <p>{text}</p>
             </li>
           )
         })}

@@ -8,7 +8,7 @@ import './styles/App.css'
 function App() {
   return (
     <>
-      <div className="bg-sky-200 p-5">
+      <div className="bg-sky-200 px-10 py-7">
         <Navbar />
         <Hero />
       </div>
