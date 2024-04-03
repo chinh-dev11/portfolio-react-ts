@@ -79,7 +79,7 @@ export default () => {
 
   return (
     <section className="py-20 align-element" id="section2">
-      <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{blockData.title}</h2>
+      <h2 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{blockData.title}</h2>
       {createSkillsNodes(skillsData)}
     </section>
   )

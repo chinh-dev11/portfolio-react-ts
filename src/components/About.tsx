@@ -14,7 +14,7 @@ export default () => {
       <div className="py-20 align-element grid grid-cols-1 md:grid-cols-2 " id="section3">
         <img src={imageData.file.url} alt={imageData.title} className="pb-20" />
         <div>
-          <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{title}</h2>
+          <h2 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h2>
           <p>{text}</p>
         </div>
       </div>
