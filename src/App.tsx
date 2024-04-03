@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import About from './components/About'
@@ -7,15 +7,16 @@ import './styles/App.css'
 
 function App() {
   return (
-    <>
-      <div className="bg-sky-200 px-10 py-7">
-        <Navbar />
+    <div>
+      <Header />
+      <div className="">
         <Hero />
+        <Skills />
+        <About />
+        <Projects />
       </div>
-      <Skills />
-      <About />
-      <Projects />
-    </>
+
+    </div>
   )
 }
 

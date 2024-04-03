@@ -20,9 +20,9 @@ const createProjectsList = (projects: any[]): ReactNode => {
   })
 
   return (
-    <ul className="flex flex-row flex-wrap gap-8">
+    <ul className="grid grid-cols-1 gap-8 md:grid=cols-2 lg:grid-cols-3">
       {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
-        <li key={index} className="bg-white rounded-lg">
+        <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300">
           <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
           <div className="p-10">
             <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
@@ -32,6 +32,18 @@ const createProjectsList = (projects: any[]): ReactNode => {
         </li>
       ))}
     </ul>
+    // <ul className="flex flex-row flex-wrap gap-8">
+    //   {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
+    //     <li key={index} className="bg-white rounded-lg">
+    //       <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
+    //       <div className="p-10">
+    //         <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
+    //         <p className="mb-5">{text}</p>
+    //         {createLinksList(links)}
+    //       </div>
+    //     </li>
+    //   ))}
+    // </ul>
   )
 }
 
@@ -44,7 +56,7 @@ const Projects = () => {
   const projectsData = Object.values(list.fields)
 
   return (
-    <section className="px-10 py-20" id="section4">
+    <section className="py-20 align-element" id="section4">
       <h2 className="text-3xl font-bold capitalize border-b border-gray-300 pb-5 mb-16">{title}</h2>
       {createProjectsList(projectsData)}
     </section>
