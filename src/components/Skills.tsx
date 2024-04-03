@@ -4,6 +4,7 @@ import { SiTypescript, SiJest, SiCypress, SiGraphql, SiMysql, SiFirebase } from 
 import { IoIosGitBranch } from "react-icons/io"
 import useFetchData from '../services/fetchData'
 import { BlockProps } from '../types'
+import { capitalize } from '../helpers'
 
 interface SkillProps {
   title: string,
@@ -15,29 +16,30 @@ const iconSize = 'w-16 h-16'
 
 const createIconNode = (skill: SkillProps): ReactNode | undefined => {
   const cssClasses = `${iconSize} text-${skill.icon}`
+  const capTitle = capitalize(skill.title)
 
   const iconList: any = {
-    vue: <FaVuejs className={cssClasses} title={skill.title} />,
-    react: <FaReact className={cssClasses} title={skill.title}/>,
-    ng: <FaAngular className={cssClasses} title={skill.title}/>,
-    js: <FaJs className={cssClasses} title={skill.title}/>,
-    ts: <SiTypescript className={cssClasses} title={skill.title}/>,
-    html: <FaHtml5 className={cssClasses} title={skill.title}/>,
-    css: <FaCss3 className={cssClasses} title={skill.title}/>,
-    sass: <FaSass className={cssClasses} title={skill.title}/>,
-    less: <FaLess className={cssClasses} title={skill.title}/>,
-    jest: <SiJest className={cssClasses} title={skill.title}/>,
-    cy: <SiCypress className={cssClasses} title={skill.title}/>,
-    npm: <FaNpm className={cssClasses} title={skill.title}/>,
-    yarn: <FaYarn className={cssClasses} title={skill.title}/>,
-    nodejs: <FaNodeJs className={cssClasses} title={skill.title}/>,
-    gql: <SiGraphql className={cssClasses} title={skill.title}/>,
-    mysql: <SiMysql className={cssClasses} title={skill.title}/>,
-    firebase: <SiFirebase className={cssClasses} title={skill.title}/>,
-    aws: <FaAws className={cssClasses} title={skill.title}/>,
-    git: <IoIosGitBranch className={cssClasses} title={skill.title}/>
+    vue: <FaVuejs className={cssClasses} title={capTitle} />,
+    react: <FaReact className={cssClasses} title={capTitle} />,
+    ng: <FaAngular className={cssClasses} title={capTitle} />,
+    js: <FaJs className={cssClasses} title={capTitle} />,
+    ts: <SiTypescript className={cssClasses} title={capTitle} />,
+    html: <FaHtml5 className={cssClasses} title={capTitle} />,
+    css: <FaCss3 className={cssClasses} title={capTitle} />,
+    sass: <FaSass className={cssClasses} title={capTitle} />,
+    less: <FaLess className={cssClasses} title={capTitle} />,
+    jest: <SiJest className={cssClasses} title={capTitle} />,
+    cy: <SiCypress className={cssClasses} title={capTitle} />,
+    npm: <FaNpm className={cssClasses} title={capTitle} />,
+    yarn: <FaYarn className={cssClasses} title={capTitle} />,
+    nodejs: <FaNodeJs className={cssClasses} title={capTitle} />,
+    gql: <SiGraphql className={cssClasses} title={capTitle} />,
+    mysql: <SiMysql className={cssClasses} title={capTitle} />,
+    firebase: <SiFirebase className={cssClasses} title={capTitle} />,
+    aws: <FaAws className={cssClasses} title={capTitle} />,
+    git: <IoIosGitBranch className={cssClasses} title={capTitle} />
   }
-  
+
   return iconList[skill.icon]
 }
 

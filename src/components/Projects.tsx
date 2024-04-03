@@ -2,31 +2,33 @@ import { ReactNode } from "react"
 import useFetchData from '../services/fetchData'
 import { createLinksList } from "../helpers/createLinksList"
 import { BlockProps, ImageProps, LinkProps } from '../types'
+import { capitalize } from '../helpers'
 
 const createProjectsList = (projects: any[]): ReactNode => {
   const projectsData = projects.map(project => {
-    const blockData: BlockProps = project.fields.block.fields
     const imageData: ImageProps = project.fields.image.fields
     const linksData: LinkProps[] = Object.values(project.fields.links.fields)
+    const techList: string[] = project.fields.techList
 
     return {
-      title: blockData.title,
-      text: blockData.text,
-      imageTitle: imageData.title,
       imageUrl: imageData.file.url,
+      imageTitle: imageData.title,
+      techList,
       links: linksData.map((link: any): LinkProps => link.fields)
     }
   })
 
   return (
     <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projectsData.map(({ title, text, imageTitle, imageUrl, links }, index) => (
+      {projectsData.map(({ imageTitle, imageUrl, techList, links }, index) => (
         <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 flex flex-col justify-between">
           <div>
-            <img src={imageUrl} alt={imageTitle} className="rounded-t-lg" />
+            <div className="bg-gray-50 pb-1 flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="rounded-t-lg" /></div>
             <div className="p-10">
-              <h2 className="text-xl font-bold capitalize mb-5">{title}</h2>
-              <p className="mb-5">{text}</p>
+              <h2 className="text-xl font-bold mb-5 capitalize">{imageTitle}</h2>
+              <ul className="flex flex-row flex-wrap gap-1 text-xs">
+                {techList.map((tech, index) => <li key={index} className="bg-gray-50 p-2 rounded">{capitalize(tech)}</li>)}
+              </ul>
             </div>
           </div>
           <div className="px-10 pb-10">{createLinksList(links)}</div>
