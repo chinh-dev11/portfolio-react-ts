@@ -78,7 +78,7 @@ export default () => {
   const skillsData: SkillProps[] = Object.values(list.fields).map((skill: any) => skill.fields)
 
   return (
-    <section className="py-20 align-element" id="section2">
+    <section className="py-20 align-element" id="skills">
       <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{blockData.title}</h3>
       {createSkillsNodes(skillsData)}
     </section>

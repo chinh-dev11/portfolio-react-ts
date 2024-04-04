@@ -24,7 +24,6 @@ const createProjectsList = (projects: any[]): ReactNode => {
         <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 flex flex-col justify-between">
           <div>
             <div className="border-b px-3 py-5 rounded-t-lg flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="h-48" /></div>
-            {/* <div className="bg-slate-400 px-3 py-4 rounded-t-lg flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="h-48" /></div> */}
             <div className="px-10 pt-10 pb-5">
               <h2 className="text-xl font-bold mb-5 capitalize">{imageTitle}</h2>
               {createPillList(techList)}
@@ -46,7 +45,7 @@ export default () => {
   const projectsData = Object.values(list.fields)
 
   return (
-    <section className="py-20 align-element" id="section4">
+    <section className="py-20 align-element" id="projects">
       <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h3>
       {createProjectsList(projectsData)}
     </section>
