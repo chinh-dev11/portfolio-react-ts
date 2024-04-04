@@ -23,7 +23,7 @@ const createProjectsList = (projects: any[]): ReactNode => {
       {projectsData.map(({ imageTitle, imageUrl, techList, links }, index) => (
         <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 flex flex-col justify-between">
           <div>
-            <div className="border-b px-3 py-5 rounded-t-lg flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="h-48" /></div>
+            <div className="border-b border-b-slate-100 px-3 py-5 rounded-t-lg flex flex-row justify-center"><img src={imageUrl} alt={imageTitle} className="h-48" /></div>
             <div className="px-10 pt-10 pb-5">
               <h2 className="text-xl font-bold mb-5 capitalize">{imageTitle}</h2>
               {createPillList(techList)}
