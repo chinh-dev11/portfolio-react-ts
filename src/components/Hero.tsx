@@ -6,14 +6,14 @@ export default () => {
   const { loading, data: { block, image, links } } = useFetchData('hero')
 
   if (loading) return <div>Loading...</div>
-
+  
   const { title, subtitle, text }: BlockProps = block.fields
   const imageData: ImageProps = image.fields
   const linksData: LinkProps[] = Object.values(links.fields).map((link: any): LinkProps => link.fields)
 
   return (
     <section className="bg-sky-200">
-      <div className="py-20 flex items-center gap-20 align-element" id="section1">
+      <div className="pt-10 pb-20 flex items-center md:justify-evenly align-element" id="section1">
         <div>
           <h1 className="text-6xl font-bold mb-2">{title}</h1>
           <h2 className="text-3xl capitalize mb-2">{subtitle}</h2>
@@ -21,7 +21,7 @@ export default () => {
           {createLinksList(linksData)}
         </div>
         <div className="hidden md:block">
-          <img src={imageData.file.url} alt={imageData.title} />
+          <img src={imageData.file.url} alt={imageData.title} className="h-auto max-w-56" />
         </div>
       </div>
     </section>
