@@ -11,6 +11,9 @@ export default {
         // 'lime': {
         //   500: techIconsColors.html // override default color
         // }
+      },
+      fontFamily: {
+        'logo': ['Comfortaa']
       }
     },
     // to redefine project color palette

@@ -46,7 +46,7 @@ export default () => {
 
   return (
     <section className="py-20 align-element" id="section4">
-      <h2 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h2>
+      <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h3>
       {createProjectsList(projectsData)}
     </section>
   )

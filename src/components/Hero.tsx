@@ -15,8 +15,8 @@ export default () => {
     <section className="bg-sky-200">
       <div className="pt-10 pb-20 flex items-center md:justify-evenly align-element" id="section1">
         <div>
-          <h1 className="text-6xl font-bold mb-2">{title}</h1>
-          <h2 className="text-3xl capitalize mb-2">{subtitle}</h2>
+          <h2 className="text-6xl font-bold mb-2">{title}</h2>
+          <h3 className="text-3xl capitalize mb-2">{subtitle}</h3>
           <p className="text-lg capitalize mb-4">{text}</p>
           {createLinksList(linksData)}
         </div>
