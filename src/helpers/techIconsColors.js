@@ -19,5 +19,5 @@ export default {
   aws:'#212d3c',
   git:'#ea4f30'
 }
-// workaround: to make new colors available to use in templates
+// workaround: to make new colors available to use in templates.
 // text-vue text-react text-ng text-js text-ts text-html text-css text-sass text-less text-jest text-cy text-npm text-yarn text-nodejs text-gql text-mysql text-firebase text-aws text-git
