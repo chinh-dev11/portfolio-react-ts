@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import { FaVuejs, FaReact, FaAngular, FaJs, FaHtml5, FaCss3, FaSass, FaLess, FaNpm, FaYarn, FaNodeJs, FaAws } from 'react-icons/fa'
-import { SiTypescript, SiJest, SiCypress, SiGraphql, SiMysql, SiFirebase } from 'react-icons/si'
+import { SiTypescript, SiJest, SiCypress, SiGraphql, SiMysql, SiFirebase, SiTailwindcss, SiContentful } from 'react-icons/si'
 import { IoIosGitBranch } from "react-icons/io"
 import useFetchData from '../services/fetchData'
 import { BlockProps } from '../types'
@@ -29,6 +29,7 @@ const createIconNode = (skill: SkillProps): ReactNode | undefined => {
     css: <FaCss3 className={cssClasses} title={capTitle} />,
     sass: <FaSass className={cssClasses} title={capTitle} />,
     less: <FaLess className={cssClasses} title={capTitle} />,
+    tailwind: <SiTailwindcss className={cssClasses} title={capTitle} />,
     jest: <SiJest className={cssClasses} title={capTitle} />,
     cy: <SiCypress className={cssClasses} title={capTitle} />,
     npm: <FaNpm className={cssClasses} title={capTitle} />,
@@ -38,6 +39,7 @@ const createIconNode = (skill: SkillProps): ReactNode | undefined => {
     mysql: <SiMysql className={cssClasses} title={capTitle} />,
     firebase: <SiFirebase className={cssClasses} title={capTitle} />,
     aws: <FaAws className={cssClasses} title={capTitle} />,
+    contentful: <SiContentful className={cssClasses} title={capTitle} />,
     git: <IoIosGitBranch className={cssClasses} title={capTitle} />
   }
 
