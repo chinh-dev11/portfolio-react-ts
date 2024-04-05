@@ -8,6 +8,7 @@ export default {
   css:'#254bde',
   sass:'#c86496',
   less:'#234877',
+  tailwind:'#3fb7f3',
   jest:'#944058',
   cy:'#59595a',
   npm:'#dd2d34',
@@ -17,7 +18,8 @@ export default {
   mysql:'#5a839c',
   firebase:'#f3c425',
   aws:'#212d3c',
+  contentful:'#f3df00',
   git:'#ea4f30'
 }
 // workaround: to make new colors available to use in templates.
-// text-vue text-react text-ng text-js text-ts text-html text-css text-sass text-less text-jest text-cy text-npm text-yarn text-nodejs text-gql text-mysql text-firebase text-aws text-git
+// text-vue text-react text-ng text-js text-ts text-html text-css text-sass text-less text-tailwind text-jest text-cy text-npm text-yarn text-nodejs text-gql text-mysql text-firebase text-aws text-contentful text-git
