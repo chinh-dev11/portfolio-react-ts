@@ -21,7 +21,7 @@ export default () => {
           {createLinksList(linksData)}
         </div>
         <div className="hidden md:block">
-          <img src={imageData.file.url} alt={imageData.title} className="h-auto max-w-56" />
+          <img src={imageData.file.url} alt={imageData.title} className="h-auto max-w-56 rounded-full ring-4 ring-white" />
         </div>
       </div>
     </section>
