@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import techIconsColors from './src/helpers/techIconsColors'
+import { addDynamicIconSelectors } from '@iconify/tailwind'
 
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
@@ -19,5 +20,7 @@ export default {
     // to redefine project color palette
     // colors: {}
   },
-  plugins: [],
+  plugins: [
+    addDynamicIconSelectors() // Iconify plugin
+  ],
 }
