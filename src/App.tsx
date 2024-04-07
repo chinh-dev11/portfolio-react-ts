@@ -2,7 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import About from './components/About'
-// import Projects from './components/Projects'
+import Projects from './components/Projects'
 import Footer from './components/Footer'
 import './styles/App.css'
 
@@ -14,7 +14,7 @@ function App() {
         <Hero />
         <Skills />
         <About />
-        {/* <Projects /> */}
+        <Projects />
       </div>
       <Footer />
     </div>
