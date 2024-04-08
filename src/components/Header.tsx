@@ -3,7 +3,7 @@ import useFetchData from '../services/fetchData'
 export default () => {
   const { loading, data } = useFetchData('navbar')
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
 
   const { sections } = data.list.fields
   

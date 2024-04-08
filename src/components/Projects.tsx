@@ -34,7 +34,7 @@ const createProjectsList = (projects: any[]): ProjectProps[] => {
 export default () => {
   const { loading, data: { block, list } } = useFetchData('projects')
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
 
   const { title }: BlockProps = block.fields
 
