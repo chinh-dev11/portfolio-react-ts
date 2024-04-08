@@ -397,6 +397,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/svg-spinners@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@iconify-json/svg-spinners/-/svg-spinners-1.1.2.tgz#930a8540f676cbc3f14696562df23132473d8261"
+  integrity sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/tailwind@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@iconify/tailwind/-/tailwind-0.1.4.tgz#c5baee6e863d01d7b1d5ff3f0c5cd4fc49b2c0c7"

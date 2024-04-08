@@ -74,7 +74,7 @@ const createSkillsNodes = (skillsData: SkillProps[]): ReactNode => {
 export default () => {
   const { loading, data: { block, list } } = useFetchData('skills')
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
 
   const blockData: BlockProps = block.fields
   const skillsData: SkillProps[] = Object.values(list.fields).map((skill: any) => skill.fields)

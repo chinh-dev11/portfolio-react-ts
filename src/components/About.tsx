@@ -4,14 +4,14 @@ import { BlockProps, ImageProps } from '../types'
 export default () => {
   const { loading, data: { block, image } } = useFetchData('about')
 
-  if (loading) return <div>Loading...</div>
+  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
 
   const { title, text }: BlockProps = block.fields
   const imageData: ImageProps = image.fields
 
   return (
     <section className="bg-white" id="about">
-      <div className="py-20 align-element grid grid-cols-1 md:grid-cols-2 place-items-center" id="section3">
+      <div className="py-20 align-element grid grid-cols-1 md:grid-cols-2 place-items-center">
         <img src={imageData.file.url} alt={imageData.title} className="pb-20 md:pb-0 h-auto max-w-72" />
         <div>
           <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h3>
