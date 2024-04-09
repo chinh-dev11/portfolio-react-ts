@@ -3,8 +3,8 @@ export default ({ ...props }) => {
 
   return (
     <>
-    {props.minHeight && <div className={`app-center-element min-h-32`}>{loading}</div>}
-    {!props.minHeight && <div className={`app-center-element`}>{loading}</div>}
+      {props.minHeight && <div className={`app-center-element min-h-32`}>{loading}</div>}
+      {!props.minHeight && <div className={`app-center-element`}>{loading}</div>}
     </>
   )
 }

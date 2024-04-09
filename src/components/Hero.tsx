@@ -1,5 +1,5 @@
 import useFetchData from '../services/fetchData'
-import { createLinksList } from '../helpers/createLinksList'
+import createLinksList from '../helpers/createLinksList'
 import { LinkProps, ImageProps, BlockProps } from '../types'
 import Loading from './Loading'
 

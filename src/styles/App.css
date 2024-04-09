@@ -6,6 +6,7 @@
   .app-align-element {
     @apply mx-auto max-w-7xl px-10;
   }
+
   .app-center-element {
     @apply flex flex-row justify-center items-center;
   }

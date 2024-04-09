@@ -1,7 +1,7 @@
 import useFetchData from '../services/fetchData'
-import { createLinksList } from "../helpers/createLinksList"
+import createLinksList from "../helpers/createLinksList"
 import { BlockProps, LinkProps } from '../types'
-import { createPillList } from "../helpers/createPillList"
+import createPillList from "../helpers/createPillList"
 import Loading from './Loading'
 
 interface ProjectProps {
