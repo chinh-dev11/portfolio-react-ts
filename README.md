@@ -1,8 +1,8 @@
 # Project
 
-- Contentful (Headless CMS)
-- Tailwind (CSS Library)
-- Vercel (CI/CD)
+- [Contentful](https://www.contentful.com/) (Headless CMS)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com) (CI/CD) / Hosting at [Chinh Portfolio](https://chinh.ca)
 - [Github](https://github.com/chinh-dev11/portfolio-react-ts)
 
 ### Tailwind CSS
