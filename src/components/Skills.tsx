@@ -6,6 +6,7 @@ import useFetchData from '../services/fetchData'
 import { BlockProps } from '../types'
 import { capitalize } from '../helpers'
 import { createPillList } from '../helpers/createPillList'
+import Loading from './Loading'
 
 interface SkillProps {
   title: string,
@@ -74,13 +75,13 @@ const createSkillsNodes = (skillsData: SkillProps[]): ReactNode => {
 export default () => {
   const { loading, data: { block, list } } = useFetchData('skills')
 
-  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
+  if (loading) return <Loading minHeight />
 
   const blockData: BlockProps = block.fields
   const skillsData: SkillProps[] = Object.values(list.fields).map((skill: any) => skill.fields)
 
   return (
-    <section className="py-20 align-element" id="skills">
+    <section className="py-20 app-align-element" id="skills">
       <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{blockData.title}</h3>
       {createSkillsNodes(skillsData)}
     </section>

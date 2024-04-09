@@ -1,11 +1,12 @@
 import useFetchData from '../services/fetchData'
 import { createLinksList } from '../helpers/createLinksList'
 import { LinkProps, ImageProps, BlockProps } from '../types'
+import Loading from './Loading'
 
 export default () => {
   const { loading, data: { block, image, links } } = useFetchData('hero')
 
-  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
+  if (loading) return <Loading minHeight />
 
   const { title, subtitle, text }: BlockProps = block.fields
   const imageData: ImageProps = image.fields
@@ -13,7 +14,7 @@ export default () => {
 
   return (
     <section className="bg-sky-200">
-      <div className="pt-10 pb-20 flex items-center md:justify-evenly align-element">
+      <div className="pt-10 pb-20 flex items-center md:justify-evenly app-align-element">
         <div>
           <h2 className="text-6xl font-bold mb-2">{title}</h2>
           <h3 className="text-3xl capitalize mb-2">{subtitle}</h3>

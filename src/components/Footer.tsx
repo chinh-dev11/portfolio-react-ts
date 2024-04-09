@@ -1,9 +1,10 @@
 import useFetchData from '../services/fetchData'
+import Loading from './Loading'
 
 export default () => {
   const { loading, data: { text } } = useFetchData('footer')
 
-  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
+  if (loading) return <Loading />
 
   return (
     <footer className="px-10 py-5 flex flex-row justify-center">
