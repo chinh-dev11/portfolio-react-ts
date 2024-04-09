@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-  .align-element {
-      @apply mx-auto max-w-7xl px-10
+  .app-align-element {
+    @apply mx-auto max-w-7xl px-10;
+  }
+
+  .app-center-element {
+    @apply flex flex-row justify-center items-center;
   }
 }
 
@@ -16,6 +20,7 @@
     font-display: swap;
     src: url(../fonts/Comfortaa/Comfortaa-Regular.woff2) format("woff2");
   }
+
   @font-face {
     font-family: "Comfortaa";
     font-style: normal;
@@ -23,6 +28,7 @@
     font-display: swap;
     src: url(../fonts/Comfortaa/Comfortaa-Bold.woff2) format("woff2");
   }
+
   @font-face {
     font-family: "Comfortaa";
     font-style: normal;
@@ -30,6 +36,7 @@
     font-display: swap;
     src: url(../fonts/Comfortaa/Comfortaa-Light.woff2) format("woff2");
   }
+
   @font-face {
     font-family: "Montserrat";
     font-style: normal;
@@ -37,6 +44,7 @@
     font-display: swap;
     src: url(../fonts/Montserrat/Montserrat-Regular.woff2) format("woff");
   }
+
   @font-face {
     font-family: "Montserrat";
     font-style: normal;
@@ -44,7 +52,13 @@
     font-display: swap;
     src: url(../fonts/Montserrat/Montserrat-Bold.woff2) format("woff");
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: "Montserrat", system-ui, sans-serif;
   }
 }

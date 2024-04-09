@@ -19,7 +19,7 @@ export default (contentType: string) => {
           'content_type': contentType,
           include: 4 // 1 (default)
         });
-        
+
         setData(items[0].fields);
       } catch (error) {
         console.error(error);
@@ -27,7 +27,7 @@ export default (contentType: string) => {
         setLoading(false);
       }
     };
-    
+
     fetchData();
   }, []);
 

@@ -21,5 +21,7 @@ export default {
   contentful:'#f3df00',
   git:'#ea4f30'
 }
-// workaround: to make new colors available to use in templates.
-// text-vue text-react text-ng text-js text-ts text-html text-css text-sass text-less text-tailwind text-jest text-cy text-npm text-yarn text-nodejs text-gql text-mysql text-firebase text-aws text-contentful text-git
+/* 
+DO NOT REMOVE THIS COMMENT - workaround: to make the custom colors available to use in templates.
+text-vue text-react text-ng text-js text-ts text-html text-css text-sass text-less text-tailwind text-jest text-cy text-npm text-yarn text-nodejs text-gql text-mysql text-firebase text-aws text-contentful text-git
+*/

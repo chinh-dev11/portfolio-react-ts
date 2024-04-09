@@ -3,7 +3,7 @@ import { LinkProps } from '../types'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import { TbWorldWww } from 'react-icons/tb'
 
-export const createLinksList = (links: LinkProps[]): ReactNode => {
+export default (links: LinkProps[]): ReactNode => {
   return (
     <ul className="flex flex-row gap-2">
       {links.map((link: LinkProps, index: number) => (

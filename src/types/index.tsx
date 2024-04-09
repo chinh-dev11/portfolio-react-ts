@@ -19,3 +19,9 @@ export interface LinkProps {
   url: string,
   icon?: string
 }
+
+export interface IconProps {
+  title: string,
+  text: string,
+  icon: string
+}

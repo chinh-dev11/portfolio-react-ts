@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import { capitalize } from './index'
 
-export const createPillList = (list: string[]): ReactNode => {
+export default (list: string[]): ReactNode => {
   return (
     <ul className="flex flex-row flex-wrap gap-2">
       {list.map((item, index) => (

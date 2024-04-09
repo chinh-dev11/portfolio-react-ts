@@ -1,7 +1,8 @@
 import useFetchData from '../services/fetchData'
-import { createLinksList } from "../helpers/createLinksList"
+import createLinksList from "../helpers/createLinksList"
 import { BlockProps, LinkProps } from '../types'
-import { createPillList } from "../helpers/createPillList"
+import createPillList from "../helpers/createPillList"
+import Loading from './Loading'
 
 interface ProjectProps {
   name: string,
@@ -34,14 +35,14 @@ const createProjectsList = (projects: any[]): ProjectProps[] => {
 export default () => {
   const { loading, data: { block, list } } = useFetchData('projects')
 
-  if (loading) return <span className="icon-[svg-spinners--pulse-rings-2] w-10 h-10 block" />
+  if (loading) return <Loading minHeight />
 
   const { title }: BlockProps = block.fields
 
   const projectsList: ProjectProps[] = createProjectsList(Object.values(list.fields))
 
   return (
-    <section className="py-20 align-element" id="projects">
+    <section className="py-20 app-align-element" id="projects">
       <h3 className="text-3xl font-bold capitalize border-b border-slate-300 pb-5 mb-16">{title}</h3>
       <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projectsList.map(({ name, imageTitle, imageUrl, techList, links, workInProgress }, index) => (
