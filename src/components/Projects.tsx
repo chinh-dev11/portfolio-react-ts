@@ -49,7 +49,9 @@ export default () => {
           <li key={index} className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 flex flex-col justify-between">
             <div>
               <div className="border-b border-b-slate-100 px-3 py-5 rounded-t-lg flex flex-row justify-center relative">
-                <img src={imageUrl} alt={imageTitle} className="h-48" />
+                <a href={links[0].url} target="_blank" title={links[0].title} rel="noreferrer">
+                  <img src={imageUrl} alt={imageTitle} className="h-48" />
+                </a>
                 {workInProgress &&
                   <div className="absolute top-0 right-0 rounded-tr-lg rounded-bl-lg border-b border-b-slate-100 border-l border-l-slate-100 bg-slate-400 p-1" title={"Work in progress"}>
                     <span className="icon-[mdi--progress-wrench] w-5 h-5 block text-white" />
